@@ -21,6 +21,23 @@ long little2bigl(long num);
 unsigned long little2bigul(unsigned long num);
 
 
+/*big endian integer to host endian */
+short big2hosts(short num);
+unsigned short big2hostus(unsigned short num);
+int big2hosti(int num);
+unsigned int big2hostui(unsigned int num);
+long big2hostl(long num);
+unsigned long big2hostul(unsigned long num);
+
+/*little endian integer to host endian */
+short little2hosts(short num);
+unsigned short little2hostus(unsigned short num);
+int little2hosti(int num);
+unsigned int little2hostui(unsigned int num);
+long little2hostl(long num);
+unsigned long little2hostul(unsigned long num);
+
+
 /* big endian binary to integer */
 short bigbinary2s(char *binary);
 unsigned short bigbinary2us(char *binary);

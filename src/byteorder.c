@@ -98,6 +98,82 @@ unsigned long little2bigul(unsigned long num)
 	return num;
 }
 
+
+/*big endian integer to host endian */
+short big2hosts(short num)
+{
+	if(isLittleEndian()) return big2littles(num);
+	return num;
+}
+
+unsigned short big2hostus(unsigned short num)
+{
+	if(isLittleEndian()) return big2littleus(num);
+	return num;
+}
+
+int big2hosti(int num)
+{
+	if(isLittleEndian()) return big2littlei(num);
+	return num;
+}
+
+unsigned int big2hostui(unsigned int num)
+{
+	if(isLittleEndian()) return big2littleui(num);
+	return num;
+}
+
+long big2hostl(long num)
+{
+	if(isLittleEndian()) return big2littlel(num);
+	return num;
+}
+
+unsigned long big2hostul(unsigned long num)
+{
+	if(isLittleEndian()) return big2littleul(num);
+	return num;
+}
+
+/*little endian integer to host endian */
+short little2hosts(short num)
+{
+	if(isLittleEndian()) return num;
+	return little2bigs(num);
+}
+
+unsigned short little2hostus(unsigned short num)
+{
+	if(isLittleEndian()) return num;
+	return little2bigus(num);
+}
+
+int little2hosti(int num)
+{
+	if(isLittleEndian()) return num;
+	return little2bigi(num);
+}
+
+unsigned int little2hostui(unsigned int num)
+{
+	if(isLittleEndian()) return num;
+	return little2bigui(num);
+}
+
+long little2hostl(long num)
+{
+	if(isLittleEndian()) return num;
+	return little2bigl(num);
+}
+
+unsigned long little2hostul(unsigned long num)
+{
+	if(isLittleEndian()) return num;
+	return little2bigul(num);
+}
+
+
 /* big endian binary to short integer */
 short bigbinary2s(char *binary)
 {
